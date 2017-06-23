@@ -1,4 +1,4 @@
-FROM python:3.3-alpine
+FROM python:2.7-alpine
 MAINTAINER Gabriel Malet <gabriemalet@gmail.com>
 
 RUN apk update \
