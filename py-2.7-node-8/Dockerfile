@@ -5,8 +5,6 @@ RUN apk update \
     && apk add bash \
     && rm -rf /var/cache/apk/*
 
-RUN pip install awscli
-
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.1.2
 
@@ -52,6 +50,8 @@ RUN addgroup -g 1000 node \
     && cd .. \
     && rm -Rf "node-v$NODE_VERSION" \
     && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
+
+RUN pip install awscli
 
 ENV YARN_VERSION 0.24.6
 
