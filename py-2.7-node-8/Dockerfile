@@ -5,6 +5,8 @@ RUN apk update \
     && apk add bash \
     && rm -rf /var/cache/apk/*
 
+RUN pip install awscli
+
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.1.2
 
