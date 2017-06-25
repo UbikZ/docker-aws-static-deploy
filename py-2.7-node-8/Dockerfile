@@ -2,7 +2,7 @@ FROM python:2.7-alpine
 MAINTAINER Gabriel Malet <gabriemalet@gmail.com>
 
 RUN apk update \
-    && apk add bash \
+    && apk add bash openssh outils-md5 \
     && rm -rf /var/cache/apk/*
 
 ENV NPM_CONFIG_LOGLEVEL info
